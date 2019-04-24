@@ -1,0 +1,2 @@
+chart_store/chart/*
+!chart_store/chart/.gitkeep
