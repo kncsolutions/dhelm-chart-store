@@ -12,6 +12,12 @@ import numpy as np
 
 
 class DhelmChartStore:
+    """
+    :param row: The exchange,tradingsymbol, type information.
+    :param api_key: The api_key
+    :param access_token: The access_token
+    :param options: List of settings. Append 1 to generate 40, 30, 20 period SMAs in daily and weekly charts.
+    """
     def __init__(self, row, api_key, access_token, options=[]):
         self.exchange = row['exchange']
         self.tradingsymbol = row['tradingsymbol']
@@ -108,7 +114,7 @@ class DhelmChartStore:
         if 'close' not in self.df_historical_day.columns:
             return
         f_name = self.tradingsymbol
-        df_scrip_sheet = pd.read_csv('index_ohlc/symbols/' + f_name + '.csv')
+        df_scrip_sheet = pd.read_csv('index_details/symbols/' + f_name + '.csv')
         print(df_scrip_sheet)
         for i, r in df_scrip_sheet.iterrows():
             df_s = historical_data_downloader(self.api_key,
@@ -134,7 +140,7 @@ class DhelmChartStore:
         if 'close' not in self.df_historical_30min.columns:
             return
         f_name = self.tradingsymbol
-        df_scrip_sheet = pd.read_csv('index_ohlc/symbols/' + f_name + '.csv')
+        df_scrip_sheet = pd.read_csv('index_details/symbols/' + f_name + '.csv')
         print(df_scrip_sheet)
         for i, r in df_scrip_sheet.iterrows():
             df_s = historical_data_downloader(self.api_key,
@@ -267,7 +273,6 @@ class DhelmChartStore:
         ax2.set_ylabel('Volume', size=8, weight='bold')
         # format the x-ticks with a human-readable date.
         xt = ax.get_xticks()
-        #new_xticks = [datetime.date.isoformat(num2date(d)) for d in xt]
         ax.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
 
         ax.get_xaxis().set_visible(False)
