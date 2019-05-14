@@ -31,8 +31,8 @@ class DhelmChartStore:
         self.df_historical_day = pd.DataFrame()
         self.df_historical_week = pd.DataFrame()
         self.df_historical_30min = pd.DataFrame()
-        self.__data_length_day = 900
-        self.__data_length_min = 60
+        self.__data_length_day = 1400
+        self.__data_length_min = 150
         self.time_frame_day = 'day'
         self.time_frame_min = '30minute'
         self.to_dt = datetime.datetime.strftime((datetime.datetime.now()), '%Y-%m-%d %H:%M:%S')
