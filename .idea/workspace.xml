@@ -4,116 +4,135 @@
     <list default="true" id="c5a232a3-5f44-4b24-ab33-23c29138a834" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DhelmChartStore.py" beforeDir="false" afterPath="$PROJECT_DIR$/DhelmChartStore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BEL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BEL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BEL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BHEL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BHEL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/BHEL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BIOCON_30min.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BIOCON_day.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/BIOCON_week.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DCBBANK_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DCBBANK_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DCBBANK_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/FSL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/FSL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/FSL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GAIL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GAIL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GAIL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GLENMARK_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GLENMARK_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/GLENMARK_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HAVELLS_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HAVELLS_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HAVELLS_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HCLTECH_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HCLTECH_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HCLTECH_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ITC_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ITC_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ITC_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MARICO_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MARICO_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MARICO_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MCX_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MCX_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/MCX_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NCC_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NCC_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NCC_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NTPC_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NTPC_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/NTPC_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ONGC_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ONGC_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/ONGC_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PAGEIND_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PAGEIND_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PAGEIND_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/POWERGRID_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/POWERGRID_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/POWERGRID_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PVR_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PVR_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/PVR_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/RAYMOND_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/RAYMOND_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/RAYMOND_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SAIL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SAIL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SAIL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SBIN_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SBIN_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SBIN_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SIEMENS_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SIEMENS_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/SIEMENS_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TECHM_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TECHM_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TECHM_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_week.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_30min.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/VEDL_30min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/VEDL_day.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_week.png" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart/VEDL_week.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMARAJABAT_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMARAJABAT_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMARAJABAT_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AMBUJACEM_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ASIANPAINT_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/AUROPHARMA_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BEL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BERGEPAINT_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/BHEL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DCBBANK_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/DIVISLAB_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/FSL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GAIL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/GLENMARK_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HAVELLS_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HCLTECH_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HDFCBANK_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/HINDUNILVR_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/INDUSINDBK_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/INDUSINDBK_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/INDUSINDBK_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ITC_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JSWSTEEL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JSWSTEEL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JSWSTEEL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUBLFOOD_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/JUSTDIAL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/KOTAKBANK_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MARICO_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/MCX_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NATIONALUM_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NATIONALUM_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NATIONALUM_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NCC_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/NTPC_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/ONGC_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PAGEIND_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PETRONET_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PETRONET_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PETRONET_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/POWERGRID_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/PVR_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/RAYMOND_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SAIL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SBIN_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/SIEMENS_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TATASTEEL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TECHM_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/TVSMOTOR_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_30min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart/VEDL_week.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart_store_knc_basket.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart_store_knc_basket.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chart_store/chart_store_selective.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart_store_selective.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chart_store/chart_store_settings.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/chart_store/chart_store_settings.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instruments/MCX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/instruments/MCX.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instruments/NFO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/instruments/NFO.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instruments/NSE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/instruments/NSE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instruments/all_fno_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/instruments/all_fno_list.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kite_chart_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/kite_chart_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kite_instrument_list_dumper.py" beforeDir="false" afterPath="$PROJECT_DIR$/kite_instrument_list_dumper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,15 +155,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/DhelmLiveChart.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6220">
+              <caret line="327" selection-start-line="327" selection-end-line="327" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kite_chart_store.py">
+        <entry file="file://$PROJECT_DIR$/DhelmChartStore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+            <state relative-caret-position="321">
+              <caret line="382" column="77" selection-start-line="382" selection-start-column="77" selection-end-line="382" selection-end-column="77" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -153,10 +179,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DhelmChartStore.py">
+        <entry file="file://$PROJECT_DIR$/kite_chart_store.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -166,9 +204,23 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>index_oh</find>
+      <find>gs</find>
+      <find>plt</find>
+      <find>self.fig</find>
+      <find>y2</find>
+      <find>plot_candle</find>
+      <find>ma20</find>
+      <find>dates</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,8 +230,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/DhelmChartStore.py" />
+        <option value="$PROJECT_DIR$/kite_instrument_list_dumper.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/DhelmLiveChart.py" />
         <option value="$PROJECT_DIR$/kite_chart_store.py" />
+        <option value="$PROJECT_DIR$/DhelmChartStore.py" />
       </list>
     </option>
   </component>
@@ -194,6 +249,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,7 +261,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -235,7 +290,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -260,6 +314,19 @@
     <entry file="file://$PROJECT_DIR$/kite_chart_store.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kite_instrument_list_dumper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+          <folding>
+            <element signature="e#17#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -270,13 +337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DhelmChartStore.py">
+    <entry file="file://$PROJECT_DIR$/DhelmLiveChart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="6220">
+          <caret line="327" selection-start-line="327" selection-end-line="327" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -285,8 +349,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kite_chart_store.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+        <state relative-caret-position="360">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DhelmChartStore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="382" column="77" selection-start-line="382" selection-start-column="77" selection-end-line="382" selection-end-column="77" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

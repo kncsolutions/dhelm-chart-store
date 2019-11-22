@@ -18,12 +18,13 @@ class DhelmChartStore:
     :param access_token: The access_token
     :param options: List of settings. Append 1 to generate 40, 30, 20 period SMAs in daily and weekly charts.
     """
-    def __init__(self, row, api_key, access_token, options=[]):
+    def __init__(self, row, api_key, access_token, chart_folder='chart_store/chart/', options=[]):
         self.exchange = row['exchange']
         self.tradingsymbol = row['tradingsymbol']
         self.scrip_type = row['type']
         self.api_key = api_key
         self.access_token = access_token
+        self.chart_folder = chart_folder
         self.options = options
         self.sma_chain = False
         if 1 in self.options:
@@ -38,6 +39,21 @@ class DhelmChartStore:
         self.to_dt = datetime.datetime.strftime((datetime.datetime.now()), '%Y-%m-%d %H:%M:%S')
         self.from_dt_day = datetime.datetime.strftime(datetime.datetime.now() + datetime.timedelta(-self.__data_length_day), '%Y-%m-%d %H:%M:%S')
         self.from_dt_min = datetime.datetime.strftime(datetime.datetime.now() + datetime.timedelta(-self.__data_length_min), '%Y-%m-%d %H:%M:%S')
+        self.fig = plt.figure()
+        self.fig.set_size_inches((30, 12.5), forward=False)
+        self.gs = GridSpec(3, 3, height_ratios=[3, 1, 1])
+        self.ax_day = self.fig.add_subplot(self.gs[0, 0])
+        self.ax2_day = self.fig.add_subplot(self.gs[1, 0], sharex=self.ax_day)
+        self.ax3_day = self.fig.add_subplot(self.gs[2, 0], sharex=self.ax_day)
+        self.ax_min = self.fig.add_subplot(self.gs[0, 1])
+        self.ax2_min = self.fig.add_subplot(self.gs[1, 1], sharex=self.ax_min)
+        self.ax3_min = self.fig.add_subplot(self.gs[2, 1], sharex=self.ax_min)
+        self.ax_week = self.fig.add_subplot(self.gs[0, 2])
+        self.ax2_week = self.fig.add_subplot(self.gs[1, 2], sharex=self.ax_week)
+        self.ax3_week = self.fig.add_subplot(self.gs[2, 2], sharex=self.ax_week)
+        self.gen_chart_func()
+
+    def gen_chart_func(self):
         self.__get_historical_ohlc()
         if self.scrip_type == 'index':
             self.__update_volume_day()
@@ -46,34 +62,55 @@ class DhelmChartStore:
         self.df_historical_30min.fillna(method='ffill', inplace=True)
         self.__gen_weekly_historical()
 
-        self.df_historical_day['log_ret'] = np.log(self.df_historical_day['close'] / self.df_historical_day['close'].shift(1))
+        self.df_historical_day['log_ret'] = np.log(
+            self.df_historical_day['close'] / self.df_historical_day['close'].shift(1))
+        self.df_historical_day['ma10'] = self.df_historical_day['close'].rolling(window=10).mean()
+        self.df_historical_day['ma20'] = self.df_historical_day['close'].rolling(window=20).mean()
         self.df_historical_day['ma50'] = self.df_historical_day['close'].rolling(window=50).mean()
         if self.sma_chain:
             self.df_historical_day['ma40'] = self.df_historical_day['close'].rolling(window=40).mean()
             self.df_historical_day['ma30'] = self.df_historical_day['close'].rolling(window=30).mean()
             self.df_historical_day['ma20'] = self.df_historical_day['close'].rolling(window=20).mean()
         self.df_historical_day['ma200'] = self.df_historical_day['close'].rolling(window=200).mean()
+        self.df_historical_day['macd_line'] = (self.df_historical_day['close'].ewm(span=12, adjust=False).mean() - self.df_historical_day['close'].ewm(span=26, adjust=False).mean())
+
+        self.df_historical_day['signal_line'] = self.df_historical_day['macd_line'].ewm(span=9, adjust=False).mean()
+        self.df_historical_day['macd_hist'] = self.df_historical_day['macd_line'] - self.df_historical_day['signal_line']
         self.df_historical_day['vol_ma50'] = self.df_historical_day['volume'].rolling(window=50).mean()
 
-        self.df_historical_30min['log_ret'] = np.log(self.df_historical_30min['close'] / self.df_historical_30min['close'].shift(1))
+        self.df_historical_30min['log_ret'] = np.log(
+            self.df_historical_30min['close'] / self.df_historical_30min['close'].shift(1))
+        self.df_historical_30min['ma20'] = self.df_historical_30min['close'].rolling(window=20).mean()
         self.df_historical_30min['ma50'] = self.df_historical_30min['close'].rolling(window=50).mean()
         self.df_historical_30min['ma200'] = self.df_historical_30min['close'].rolling(window=200).mean()
+        self.df_historical_30min['macd_line'] = (self.df_historical_30min['close'].ewm(span=12, adjust=False).mean() - self.df_historical_30min['close'].ewm(span=26, adjust=False).mean())
+        self.df_historical_30min['signal_line'] = self.df_historical_30min['macd_line'].ewm(span=9, adjust=False).mean()
+        self.df_historical_30min['macd_hist'] = self.df_historical_30min['macd_line'] - self.df_historical_30min['signal_line']
+
         self.df_historical_30min['vol_ma50'] = self.df_historical_30min['volume'].rolling(window=50).mean()
 
-        self.df_historical_week['log_ret'] = np.log(self.df_historical_week['close'] / self.df_historical_week['close'].shift(1))
+        self.df_historical_week['log_ret'] = np.log(
+            self.df_historical_week['close'] / self.df_historical_week['close'].shift(1))
+        self.df_historical_week['ma10'] = self.df_historical_week['close'].rolling(window=2).mean()
+        self.df_historical_week['ma20'] = self.df_historical_week['close'].rolling(window=4).mean()
         self.df_historical_week['ma50'] = self.df_historical_week['close'].rolling(window=10).mean()
         if self.sma_chain:
             self.df_historical_week['ma40'] = self.df_historical_week['close'].rolling(window=8).mean()
             self.df_historical_week['ma30'] = self.df_historical_week['close'].rolling(window=6).mean()
             self.df_historical_week['ma20'] = self.df_historical_week['close'].rolling(window=4).mean()
         self.df_historical_week['ma200'] = self.df_historical_week['close'].rolling(window=40).mean()
+        self.df_historical_week['macd_line'] = (self.df_historical_week['close'].ewm(span=12, adjust=False).mean()
+                                                 - self.df_historical_week['close'].ewm(span=26, adjust=False).mean())
+        self.df_historical_week['signal_line'] = self.df_historical_week['macd_line'].ewm(span=9, adjust=False).mean()
+        self.df_historical_week['macd_hist'] = self.df_historical_week['macd_line'] - self.df_historical_week['signal_line']
+
         self.df_historical_week['vol_ma50'] = self.df_historical_week['volume'].rolling(window=10).mean()
         print(self.df_historical_30min)
         print(self.df_historical_day)
         print(self.df_historical_week)
-        self.gen_chart(self.df_historical_day, 'day')
-        self.gen_chart_min(self.df_historical_30min, '30min')
-        self.gen_chart(self.df_historical_week, 'week')
+        self.gen_chart_day(self.df_historical_day.tail(195), 'day')
+        self.gen_chart_min(self.df_historical_30min.tail(195), '30min')
+        self.gen_chart_week(self.df_historical_week, 'week')
 
     def __get_historical_ohlc(self):
         if self.exchange == ORDER_PARAMETERS.EXCHANGE_NSE:
@@ -104,7 +141,7 @@ class DhelmChartStore:
                                                               self.from_dt_min,
                                                               self.to_dt,
                                                               self.time_frame_min,
-                                                              continuous).get_historical_data()
+                                                              False).get_historical_data()
 
         self.df_historical_30min.set_index('date', inplace=True)
         self.df_historical_30min.sort_index(inplace=True)
@@ -169,118 +206,181 @@ class DhelmChartStore:
         offset = pd.offsets.timedelta(days=-6)
         self.df_historical_week = self.df_historical_day.resample('W', loffset=offset).apply(logic)
 
-    def gen_chart(self, df_h, time_frame):
-        fig = plt.figure()
+    def gen_chart_day(self, df_h, time_frame):
         title = 'Price-Volume-SMA '+time_frame+' chart for ' + self.tradingsymbol + '(' + str(
             datetime.datetime.now().date()) + ')'
-
-        gs = GridSpec(2, 1, height_ratios=[3, 1])
         x = np.array(list(range(len(df_h))))
         candlesticks = zip(date2num(df_h.index), df_h['open'], df_h['close'], df_h['high'], df_h['low'],
                            df_h['volume'])
-        ax = fig.add_subplot(gs[0])
-        ax.set_ylabel('Price', size=7, weight='bold')
-        ax.set_title(title, fontsize=10, fontweight='bold')
-        candlestick(ax, candlesticks, width=1, colorup='g', colordown='r')
-        lma50, = ax.plot(date2num(df_h.index), df_h['ma50'], color='b')
-        lma200, = ax.plot(date2num(df_h.index), df_h['ma200'], color='r')
-        ax.legend([lma50, lma200], ['50 DAY SMA', '200 DAY SMA'], loc="upper left")
+        self.ax_day.clear()
+        self.ax2_day.clear()
+        self.ax3_day.clear()
+        self.ax_day.set_ylabel('Price', size=7, weight='bold')
+        self.ax_day.set_title(title, fontsize=10, fontweight='bold')
+        candlestick(self.ax_day, candlesticks, width=1, colorup='g', colordown='r')
+        lma20, = self.ax_day.plot(date2num(df_h.index), df_h['ma20'], color='g')
+        lma50, = self.ax_day.plot(date2num(df_h.index), df_h['ma50'], color='b')
+        lma200, = self.ax_day.plot(date2num(df_h.index), df_h['ma200'], color='r')
+        self.ax_day.legend([lma20, lma50, lma200], ['20 DAY SMA', '50 DAY SMA', '200 DAY SMA'], loc="upper left")
         if self.sma_chain:
-            lma40, = ax.plot(date2num(df_h.index), df_h['ma40'], color='g')
-            lma30, = ax.plot(date2num(df_h.index), df_h['ma30'], color='m')
-            lma20, = ax.plot(date2num(df_h.index), df_h['ma20'], color='k')
-            ax.legend([lma50, lma200, lma40, lma30, lma20], ['50 DAY SMA', '200 DAY SMA', '40 DAY SMA', '30 DAY SMA', '20 DAY SMA'], loc="upper left")
+            lma40, = self.ax_day.plot(date2num(df_h.index), df_h['ma40'], color='g')
+            lma30, = self.ax_day.plot(date2num(df_h.index), df_h['ma30'], color='m')
+            lma10, = self.ax_day.plot(date2num(df_h.index), df_h['ma10'], color='k')
+            self.ax_day.legend([lma10, lma50, lma200, lma40, lma30, lma20], ['10 DAY SMA', '50 DAY SMA', '200 DAY SMA', '40 DAY SMA', '30 DAY SMA', '20 DAY SMA'], loc="upper left")
         pad = 0.25
-        yl = ax.get_ylim()
-        ax.set_ylim(yl[0] - (yl[1] - yl[0]) * pad, yl[1])
-        ax.grid(True, which='major', axis='both', linestyle='--')
-        ax2 = fig.add_subplot(gs[1], sharex=ax)
-        ax2.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        yl = self.ax_day.get_ylim()
+        self.ax_day.set_ylim(yl[0] - (yl[1] - yl[0]) * pad, yl[1])
+        self.ax_day.grid(True, which='major', axis='both', linestyle='--')
+        self.ax2_day.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        self.ax3_day.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
         dates = date2num(df_h.index)
         dates = np.asarray(dates)
         volume = df_h['volume']
         volume = np.asarray(volume)
         pos = df_h['log_ret'] > 0
         neg = df_h['log_ret'] < 0
-        ax2.bar(dates[pos], volume[pos], color='green', width=1, align='center')
-        ax2.bar(dates[neg], volume[neg], color='red', width=1, align='center')
-        vma50, = ax2.plot(date2num(df_h.index), df_h['vol_ma50'], color='b')
-        ax2.legend([vma50], ['50 DAY VOLUME SMA'], loc="upper left")
+        macd_hist = df_h['macd_hist']
+        self.ax2_day.bar(dates[pos], volume[pos], color='green', width=1, align='center')
+        self.ax2_day.bar(dates[neg], volume[neg], color='red', width=1, align='center')
+        self.ax3_day.bar(dates, macd_hist, color='black', width=1, align='center')
+        self.ax3_day.plot(date2num(df_h.index), df_h['macd_hist'], color='black')
+        self.ax3_day.plot(date2num(df_h.index), df_h['macd_line'], color='b')
+        self.ax3_day.plot(date2num(df_h.index), df_h['signal_line'], color='r')
+        vma50, = self.ax2_day.plot(date2num(df_h.index), df_h['vol_ma50'], color='b')
+        self.ax2_day.legend([vma50], ['50 DAY VOLUME SMA'], loc="upper left")
         # scale the x-axis tight
-        ax2.set_xlim(min(dates) - 10, max(dates) + 10)
-        # the y-ticks for the bar were too dense, keep only every third one
-        yticks = ax2.get_yticks()
-        # ax2.set_yticks(yticks[::3])
-        ax2.ticklabel_format(style='plain')
-        ax2.set_ylabel('Volume', size=8, weight='bold')
+        self.ax2_day.set_xlim(min(dates) - 10, max(dates) + 10)
+
+        yticks = self.ax2_day.get_yticks()
+        self.ax2_day.ticklabel_format(style='plain')
+        self.ax2_day.set_ylabel('Volume', size=8, weight='bold')
         # format the x-ticks with a human-readable date.
-        xt = ax.get_xticks()
+        xt = self.ax_day.get_xticks()
         new_xticks = [datetime.date.isoformat(num2date(d)) for d in xt]
-        ax.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
-        ax.get_xaxis().set_visible(False)
-        ax2.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax_day.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax_day.get_xaxis().set_visible(False)
+        self.ax2_day.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax2_day.get_xaxis().set_visible(False)
+        self.ax3_day.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
         plt.subplots_adjust(wspace=0, hspace=0)
-        fig.set_size_inches((11, 8.5), forward=False)
-        fig.savefig('chart_store/chart/' + self.tradingsymbol + '_'+time_frame+'.png',
-                    dpi=500, bbox_inches='tight')
-        plt.clf()
-        plt.cla()
-        plt.close()
+
 
     def gen_chart_min(self, df_h, time_frame):
-        fig = plt.figure()
         title = 'Price-Volume-SMA ' + time_frame + ' chart for ' + self.tradingsymbol + '(' + str(
             datetime.datetime.now().date()) + ')'
-
-        gs = GridSpec(2, 1, height_ratios=[3, 1])
         xx = list(range(len(df_h)))
         xxx = list(range(len(df_h)))[::50]
         xxx.append(xx[-1])
-        dd = df_h.index[::50].tolist()
+        dd = df_h.index[::20].tolist()
         dd.append(df_h.index[-1])
         candlesticks = zip(xx, df_h['open'], df_h['close'], df_h['high'], df_h['low'],
                            df_h['volume'])
-        ax = fig.add_subplot(gs[0])
-        ax.set_ylabel('Price', size=7, weight='bold')
-        ax.set_title(title, fontsize=10, fontweight='bold')
-        candlestick(ax, candlesticks, width=1, colorup='g', colordown='r')
-        lma50, = ax.plot(xx, df_h['ma50'], color='b')
-        lma200, = ax.plot(xx, df_h['ma200'], color='r')
-        ax.legend([lma50, lma200], ['50 PERIOD SMA', '200 PERIOD SMA'], loc="upper left")
+        self.ax_min.clear()
+        self.ax2_min.clear()
+        self.ax3_min.clear()
+        self.ax_min.set_ylabel('Price', size=7, weight='bold')
+        self.ax_min.set_title(title, fontsize=10, fontweight='bold')
+        candlestick(self.ax_min, candlesticks, width=1, colorup='g', colordown='r')
+        lma20, = self.ax_min.plot(xx, df_h['ma20'], color='g')
+        lma50, = self.ax_min.plot(xx, df_h['ma50'], color='b')
+        lma200, = self.ax_min.plot(xx, df_h['ma200'], color='r')
+        self.ax_min.legend([lma20, lma50, lma200], ['20 PERIOD SMA','50 PERIOD SMA', '200 PERIOD SMA'], loc="upper left")
         pad = 0.25
-        yl = ax.get_ylim()
-        ax.set_ylim(yl[0] - (yl[1] - yl[0]) * pad, yl[1])
-        ax.grid(True, which='major', axis='both', linestyle='--')
-        ax2 = fig.add_subplot(gs[1], sharex=ax)
-        ax2.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        yl = self.ax_min.get_ylim()
+        self.ax_min.set_ylim(yl[0] - (yl[1] - yl[0]) * pad, yl[1])
+        self.ax_min.grid(True, which='major', axis='both', linestyle='--')
+        self.ax2_min.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        self.ax3_min.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
         dates = date2num(df_h.index)
         dates = np.asarray(dates)
         xxxx = np.asarray(xx)
         volume = df_h['volume']
         volume = np.asarray(volume)
+        macd_hist = df_h['macd_hist']
         pos = df_h['log_ret'] > 0
         neg = df_h['log_ret'] < 0
-        ax2.bar(xxxx[pos],volume[pos], color='green', width=1, align='center')
-        ax2.bar(xxxx[neg],volume[neg], color='red', width=1, align='center')
-        vma50, = ax2.plot(xx, df_h['vol_ma50'], color='b')
-        ax2.legend([vma50], ['50 PERIOD VOLUME SMA'], loc="upper left")
-        # scale the x-axis tight
-        #ax2.set_xlim(min(dates) - 10, max(dates) + 10)
-        # the y-ticks for the bar were too dense, keep only every third one
-        yticks = ax2.get_yticks()
-        # ax2.set_yticks(yticks[::3])
-        ax2.ticklabel_format(style='plain')
-        ax2.set_ylabel('Volume', size=8, weight='bold')
+        self.ax2_min.bar(xxxx[pos],volume[pos], color='green', width=1, align='center')
+        self.ax2_min.bar(xxxx[neg],volume[neg], color='red', width=1, align='center')
+        vma50, = self.ax2_min.plot(xx, df_h['vol_ma50'], color='b')
+        self.ax2_min.legend([vma50], ['50 PERIOD VOLUME SMA'], loc="upper left")
+        self.ax3_min.bar(xxxx, macd_hist, color='black', width=1, align='center')
+        self.ax3_min.plot(xx, df_h['macd_hist'], color='black')
+        self.ax3_min.plot(xx, df_h['macd_line'], color='b')
+        self.ax3_min.plot(xx, df_h['signal_line'], color='r')
+        yticks = self.ax2_min.get_yticks()
+        self.ax2_min.ticklabel_format(style='plain')
+        self.ax2_min.set_ylabel('Volume', size=8, weight='bold')
         # format the x-ticks with a human-readable date.
-        xt = ax.get_xticks()
-        ax.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
+        xt = self.ax_min.get_xticks()
+        self.ax_min.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
 
-        ax.get_xaxis().set_visible(False)
-        ax2.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax_min.get_xaxis().set_visible(False)
+        self.ax2_min.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax2_min.get_xaxis().set_visible(False)
+        self.ax3_min.set_xticklabels(dd, rotation=45, horizontalalignment='right', weight='bold')
         plt.subplots_adjust(wspace=0, hspace=0)
-        fig.set_size_inches((11, 8.5), forward=False)
-        fig.savefig('chart_store/chart/' + self.tradingsymbol + '_' + time_frame + '.png',
-                    dpi=500, bbox_inches='tight')
+
+    def gen_chart_week(self, df_h, time_frame):
+        title = 'Price-Volume-SMA '+time_frame+' chart for ' + self.tradingsymbol + '(' + str(
+            datetime.datetime.now().date()) + ')'
+        x = np.array(list(range(len(df_h))))
+        candlesticks = zip(date2num(df_h.index), df_h['open'], df_h['close'], df_h['high'], df_h['low'],
+                           df_h['volume'])
+        self.ax_week.clear()
+        self.ax2_week.clear()
+        self.ax3_week.clear()
+        self.ax_week.set_ylabel('Price', size=7, weight='bold')
+        self.ax_week.set_title(title, fontsize=10, fontweight='bold')
+        candlestick(self.ax_week, candlesticks, width=1, colorup='g', colordown='r')
+        lma20, = self.ax_week.plot(date2num(df_h.index), df_h['ma20'], color='g')
+        lma50, = self.ax_week.plot(date2num(df_h.index), df_h['ma50'], color='b')
+        lma200, = self.ax_week.plot(date2num(df_h.index), df_h['ma200'], color='r')
+        self.ax_week.legend([lma20, lma50, lma200], ['20 DAY SMA', '50 DAY SMA', '200 DAY SMA'], loc="upper left")
+        if self.sma_chain:
+            lma40, = self.ax_week.plot(date2num(df_h.index), df_h['ma40'], color='g')
+            lma30, = self.ax_week.plot(date2num(df_h.index), df_h['ma30'], color='m')
+            lma10, = self.ax_week.plot(date2num(df_h.index), df_h['ma10'], color='k')
+            self.ax_week.legend([lma10, lma50, lma200, lma40, lma30, lma20], ['10 DAY SMA', '50 DAY SMA', '200 DAY SMA', '40 DAY SMA', '30 DAY SMA', '20 DAY SMA'], loc="upper left")
+        pad = 0.25
+        yl = self.ax_week.get_ylim()
+        self.ax_week.set_ylim(yl[0] - (yl[1] - yl[0]) * pad, yl[1])
+        self.ax_week.grid(True, which='major', axis='both', linestyle='--')
+        self.ax2_week = self.fig.add_subplot(self.gs[1, 2], sharex=self.ax_week)
+        #self.ax3_week = self.fig.add_subplot(self.gs[1, 3], sharex=self.ax_week)
+        self.ax2_week.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        self.ax3_week.set_position(matplotlib.transforms.Bbox([[0.125, 0.1], [0.9, 0.22]]))
+        dates = date2num(df_h.index)
+        dates = np.asarray(dates)
+        volume = df_h['volume']
+        volume = np.asarray(volume)
+        pos = df_h['log_ret'] > 0
+        neg = df_h['log_ret'] < 0
+        macd_hist = df_h['macd_hist']
+        self.ax2_week.bar(dates[pos], volume[pos], color='green', width=1, align='center')
+        self.ax2_week.bar(dates[neg], volume[neg], color='red', width=1, align='center')
+        self.ax3_week.bar(dates, macd_hist, color='black', width=1, align='center')
+        vma50, = self.ax2_week.plot(date2num(df_h.index), df_h['vol_ma50'], color='b')
+        self.ax3_week.plot(date2num(df_h.index), df_h['macd_hist'], color='black')
+        macd_line, = self.ax3_week.plot(date2num(df_h.index), df_h['macd_line'], color='b')
+        signal_line, = self.ax3_week.plot(date2num(df_h.index), df_h['signal_line'], color='r')
+        self.ax2_week.legend([vma50], ['50 DAY VOLUME SMA'], loc="upper left")
+        self.ax3_week.legend([macd_line, signal_line],
+                            ['MACD LINE', 'SIGNAL LINE'],
+                            loc="upper left")
+        # scale the x-axis tight
+        self.ax2_week.set_xlim(min(dates) - 10, max(dates) + 10)
+        # the y-ticks for the bar were too dense, keep only every third one
+        yticks = self.ax2_week.get_yticks()
+        self.ax2_week.ticklabel_format(style='plain')
+        self.ax2_week.set_ylabel('Volume', size=8, weight='bold')
+        # format the x-ticks with a human-readable date.
+        xt = self.ax_week.get_xticks()
+        new_xticks = [datetime.date.isoformat(num2date(d)) for d in xt]
+        self.ax_week.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
+        self.ax_week.get_xaxis().set_visible(False)
+        self.ax3_week.set_xticklabels(new_xticks, rotation=45, horizontalalignment='right', weight='bold')
+        plt.subplots_adjust(wspace=0, hspace=0)
+        self.fig.savefig(self.chart_folder + self.tradingsymbol +'.png',dpi=200, bbox_inches='tight')
         plt.clf()
         plt.cla()
         plt.close()
