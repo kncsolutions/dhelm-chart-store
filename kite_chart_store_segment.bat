@@ -1,0 +1,4 @@
+start kite_chart_store_segment1.bat
+start kite_chart_store_segment2.bat
+start kite_chart_store_segment3.bat
+start kite_chart_store_segment4.bat
