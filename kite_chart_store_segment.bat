@@ -2,3 +2,7 @@ start kite_chart_store_segment1.bat
 start kite_chart_store_segment2.bat
 start kite_chart_store_segment3.bat
 start kite_chart_store_segment4.bat
+start kite_chart_store_segment5.bat
+start kite_chart_store_segment6.bat
+start kite_chart_store_segment7.bat
+start kite_chart_store_segment8.bat
