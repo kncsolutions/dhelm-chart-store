@@ -35,5 +35,3 @@ path.
 
 ## Results
 The generated charts are stored in `chart_store/chart` folder.
-
-##### [NB: The dhelm-chart-store is proprietary product of KNC SOLUTIONS PRIVATE LIMITED. Unauthorized access and use without written permission is strictly prohibited]
